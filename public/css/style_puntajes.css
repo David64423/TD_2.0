@@ -1,0 +1,27 @@
+:root{
+    --bf: 1px solid black;
+    --altCont: 20vh;
+    --ancCont: 40vw;
+}
+
+
+body{
+
+    background-image: url("../gifs/fondoPuntajes.gif");
+    background-size: 100% 120%;
+    background-repeat: no-repeat;
+
+}
+
+.contenedores{
+border: var(--bf);
+height: var(--altCont);
+width: var(--ancCont);
+position: relative;
+left: 30%;
+margin: 10px;
+background-image: url("../gifs/fondoPuntajes.jpg");
+background-size: 100% 100%;
+background-repeat: no-repeat;
+
+}

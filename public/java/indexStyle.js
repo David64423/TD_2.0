@@ -16,6 +16,8 @@ abajo.addEventListener('click',function(){ mainCaminar(personaje2,"pers2_1.png",
 
 botomA.addEventListener('click',function(){ataque(personaje2,"pers2_1.png","espada.gif")});
 
+reset.addEventListener('click',function(){daño(personaje2,"pers2_1.png","golpeado.gif")});
+
 
 
 
@@ -461,6 +463,16 @@ function ataque(a,b,c){
 
     
    setTimeout(cambiar,3000,a,"img/personajes/"+b);
+ 
+
+};
+function daño(a,b,c){
+
+
+   cambiar(a, "img/personajes/daño/"+c);
+
+
+   setTimeout(cambiar,3000,a,"img/personajes/daño/"+b);
  
 
 };

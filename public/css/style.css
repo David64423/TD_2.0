@@ -31,6 +31,12 @@ decir, no son bordes de prueba como los --bp */
     height: 10vh;
     width: 10vw;
     color: var(--c2);
+    cursor: pointer;
+}
+
+#boton_php:hover{
+    background-color: var(--cbp3);
+   
 }
 
 #link_puntajes{

@@ -16,7 +16,7 @@ abajo.addEventListener('click',function(){ mainCaminar(personaje2,"pers2_1.png",
 
 botomA.addEventListener('click',function(){ataque(personaje2,"pers2_1.png","espada.gif")});
 
-reset.addEventListener('click',function(){daño(personaje2,"pers2_1.png","golpeado.gif")});
+reset.addEventListener('click',function(){daño(personaje2,"../pers2_1.png","golpeado.gif")});
 
 
 

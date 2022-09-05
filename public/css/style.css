@@ -25,9 +25,28 @@ decir, no son bordes de prueba como los --bp */
 }
 
 
+#boton_php{
+    border-radius: 25px;
+    background-color: var(--p);
+    height: 10vh;
+    width: 10vw;
+    color: var(--c2);
+}
+
+#link_puntajes{
+    position: relative;
+    bottom: 90vh;
+    left:80vw;
+    cursor: pointer;
+}
+
+
 *{
     padding: 0;
     margin: 0;
+}
+body{
+    background-color: var(--s2);
 }
 
 #contenedorCompleto{

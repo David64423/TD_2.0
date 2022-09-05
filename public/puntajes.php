@@ -33,10 +33,10 @@ while ($registro= mysqli_fetch_assoc($resulset)){
    ?>
    <div id="cuerpo">
     <div class="contenedores">
-   <?php
-    echo $registro['punt_nick'], ": ";
-    echo $registro['punt_puntaje'], "<br>";
-    ?>
+    <p id="nick" ><?php echo $registro['punt_nick'];?></p>
+    <p id="puntaje" ><?php echo $registro['punt_puntaje'];?></p>
+
+    
     </div>
 </div>
    <?php

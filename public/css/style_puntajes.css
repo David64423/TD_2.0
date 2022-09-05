@@ -23,5 +23,22 @@ margin: 10px;
 background-image: url("../gifs/fondoPuntajes.jpg");
 background-size: 100% 100%;
 background-repeat: no-repeat;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column-reverse;
 
+}
+#puntaje{
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+color: red;
+font-size: 3vw;
+}
+
+#nick{
+    position: relative;
+    bottom: 10vh;
+    font-size: 2vw;
+   
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }

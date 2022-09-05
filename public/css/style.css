@@ -42,7 +42,7 @@ decir, no son bordes de prueba como los --bp */
 #link_puntajes{
     position: relative;
     bottom: 90vh;
-    left:80vw;
+    left:89vw;
     cursor: pointer;
 }
 
@@ -203,6 +203,11 @@ color: var(--c1);
     flex-direction:column;
     justify-content: space-between;
     width: 50%;
+}
+#home{
+    position: relative;
+    bottom: 100vh;
+    left: 80vw;
 }
 
 #pers2{

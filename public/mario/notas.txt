@@ -1,0 +1,9 @@
+Crea una pagina con 4 párrafos, 1 enlace luego de cada párrafo y una imagen luego de cada enlace
+
+Cuando se pinche sobre el primer enlace, se oculte el párrafo superior.
+
+Cuando se pinche sobre el segundo enlace se realice un efecto sobre la imagen posterior al enlace.
+
+Colocar al ultimo enlace de la página un comportamiento idéntico al del primer enlace.
+
+Cuando un párrafo se oculte, debe cambiar el mensaje del enlace asociado (pista: propiedad innerHTML).

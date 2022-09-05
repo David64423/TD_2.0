@@ -115,7 +115,7 @@ function automatizar(a,b,c){
    let tiempo=0;
    let aumento=200;
    animacionInicio();
-   tiempo=2100;// Tiempo entre la animacion de tiempo y cuando empieza a caminar
+   tiempo=2500;// Tiempo entre la animacion de tiempo y cuando empieza a caminar
    setTimeout(mainCaminar,tiempo,a,b,c,sumarX);
    tiempo += aumento;
    setTimeout(mainCaminar,tiempo,a,b,c,sumarX);

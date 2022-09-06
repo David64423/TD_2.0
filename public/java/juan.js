@@ -1,4 +1,5 @@
 let aunmentoRemolino=100;
+let aunmentoRemolinoR=100;
 let pers2 = document.getElementById("pers2");
 let botomB = document.getElementById("botomB");
 
@@ -29,11 +30,11 @@ function animacionRemolino(){
     pers2.style.transform="translateX(400px)";
     pers2.style.transition="2s";
     },tempRemolino,"cinco.png");
-    tempRemolino = tempRemolino + aunmentoRemolino;
+    tempRemolino = tempRemolino + aunmentoRemolinoR;
     setTimeout(cambiarImagenAnimacionRemolino,tempRemolino,"seis.png");
-    tempRemolino = tempRemolino + aunmentoRemolino;
+    tempRemolino = tempRemolino + aunmentoRemolinoR;
     setTimeout(cambiarImagenAnimacionRemolino,tempRemolino,"siete.png");
-    tempRemolino = tempRemolino + aunmentoRemolino;
+    tempRemolino = tempRemolino + aunmentoRemolinoR;
     setTimeout(()=>{cambiarImagenAnimacionRemolino("ocho.png");
         pers2.style.transition="0.5s";
         pers2.style.transform="translateX(0px)";},tempRemolino,"ocho.png");
@@ -67,4 +68,4 @@ function cambiarImagenAnimacionRemolino(a){
 pers2.src="img/personajes/remolino/"+a;
 }
 
-botomB.addEventListener('click', animacionRemolino)
+botomB.addEventListener('click', animacionRemolino) 

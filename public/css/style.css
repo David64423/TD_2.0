@@ -50,9 +50,17 @@ decir, no son bordes de prueba como los --bp */
 *{
     padding: 0;
     margin: 0;
+
+    
 }
 body{
-    background-color: var(--s2);
+    margin: 0%;
+    background-image:url(/img/paginaprincipal/fondo.jpg);
+    min-height: 100vh;
+    background-repeat:no-repeat ;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 #contenedorCompleto{

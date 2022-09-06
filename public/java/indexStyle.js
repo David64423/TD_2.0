@@ -18,6 +18,9 @@ botomA.addEventListener('click',function(){ataque(personaje2,"pers2_1.png","espa
 
 reset.addEventListener('click',function(){daño(personaje2,"../pers2_1.png","golpeado.gif")});
 
+derecha.addEventListener('click',function(){muerte(personaje2,"../pers2_1.png","muerte.gif")});
+
+
 
 
 
@@ -478,6 +481,18 @@ function daño(a,b,c){
  
 
 };
+function muerte(a,b,c){
+
+
+   cambiar(a, "img/personajes/muerte/"+c);
+
+
+   setTimeout(cambiar,3000,a,"img/personajes/muerte/"+b);
+ 
+
+};
+
+
 
 let temp=0;
 let aunmento=100;
@@ -538,6 +553,5 @@ function animacionInicio(){
    },temp)
 }
 
-function cambiarImagenAnimacionInicio(a){
-pers2.src="img/personajes/intro/"+a;
-}
+
+ 

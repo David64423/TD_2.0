@@ -553,5 +553,9 @@ function animacionInicio(){
    },temp)
 }
 
+function cambiarImagenAnimacionInicio(a){
+   pers2.src="img/personajes/intro/"+a;
+   }
+
 
  

@@ -66,12 +66,7 @@ decir, no son bordes de prueba como los --bp */
 
 
 #boton_php{
-    border-radius: 25px;
-    background-color: var(--p);
-    height: 10vh;
-    width: 10vw;
-    color: var(--c2);
-    cursor: pointer;
+    background-color: transparent;
 }
 
 #boton_php:hover{

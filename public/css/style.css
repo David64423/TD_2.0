@@ -46,7 +46,7 @@ decir, no son bordes de prueba como los --bp */
     position: relative;
     left: 35vw;
     
-    bottom: 110vh;
+    bottom: 107vh;
     height: 25vh;
     width: 20vw;
     background:none;
@@ -57,7 +57,7 @@ decir, no son bordes de prueba como los --bp */
 .colocarLado{
     position: relative;
     left: 10vw;
-    bottom: 14.3vh;
+    bottom: 13.5vh;
 }
 
 .vida{
@@ -67,6 +67,7 @@ decir, no son bordes de prueba como los --bp */
 
 #boton_php{
     background-color: transparent;
+    border: none;
 }
 
 #boton_php:hover{

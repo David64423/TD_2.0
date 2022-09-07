@@ -472,6 +472,23 @@ i43++;
 
 //ataque boton A
 
+function ataque(){
+   let time=0;
+   let aumento=100;
+   pers2.style.height="95%";
+   pers2.style.width="75%";
+
+   setTimeout(cambiar,time,"../pers2_1.png");
+   time = time + aumento;
+   pers2.style.transition="1.0s";
+   pers2.style.transform="translate(31vw,10.50vh)";"img/personajes/";
+   setTimeout(cambiar,time,"img/personajes/");
+
+
+};
+   
+
+/*ataque 
 function ataque(a,b,c){
 
 
@@ -482,6 +499,7 @@ function ataque(a,b,c){
  
 
 };
+*/
 function daño(a,b,c){
 
 

@@ -8,6 +8,17 @@ let distanciaX=0;
 let distanciaY=0;    
 let distanciaM=0.7;
 let start = document.getElementById('start');
+let torreVida = document.getElementById('vidaTorre');
+let personajeVida = document.getElementById('vidaPersonaje2');
+let vidaT=200;
+let vidaP=50;
+
+function asociarVida(){
+   torreVida.innerHTML=vidaT;
+   personajeVida.innerText=vidaP;
+}
+asociarVida();
+
 //let reset = document.getElementById('reset');
 izquierda.addEventListener('click',function(){ mainCaminar(personaje2,"pers2_1.png","pers2_2.png",restarX)});
 start.addEventListener('click',function(){ automatizar(personaje2,"pers2_1.png","pers2_2.png",sumarX)});
@@ -599,7 +610,10 @@ function animacionRemolino(){
     tempRemolino = tempRemolino + aunmentoRemolinoR;
     setTimeout(()=>{cambiarImagenAnimacionRemolino("ocho.png");
         pers2.style.transition="0.5s";
-        pers2.style.transform="translate(31vw,10.50vh)";},tempRemolino,"ocho.png");
+        pers2.style.transform="translate(31vw,10.50vh)";
+      vidaT = vidaT-20;
+      asociarVida();
+   },tempRemolino,"ocho.png");
     tempRemolino = tempRemolino + aunmentoRemolino;
     setTimeout(cambiarImagenAnimacionRemolino,tempRemolino,"nueve.png");
     tempRemolino = tempRemolino + aunmentoRemolino;

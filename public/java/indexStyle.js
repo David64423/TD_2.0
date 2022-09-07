@@ -39,8 +39,7 @@ derecha.addEventListener('click',function(){muerte(personaje2,"../pers2_1.png","
 
 //Funcion para actualizar coordenadas
 const cambiarXY = () => {
-x.innerText = distanciaX;
-y.innerText = distanciaY;
+
 };
 
 cambiarXY();
@@ -513,13 +512,13 @@ function daño(a,b,c){
   asociarVida();
 
 };
-function muerte(a,b,c){
+function muerte(a,b){
 
 
-   cambiar(a, "img/personajes/muerte/"+c);
+   cambiar(a, "img/personajes/muerte/"+b);
 
 
-   setTimeout(cambiar,3000,a,"img/personajes/muerte/"+b);
+   
  
 
 };
@@ -643,6 +642,10 @@ function animacionRemolino(){
     setTimeout(cambiarImagenAnimacionRemolino,tempRemolino,"once.png");
     tempRemolino = tempRemolino + aunmentoRemolino;
 
+    if(vidaT <=20){
+      setTimeout(muerteTorre,tempRemolino);
+    }
+
 
     setTimeout(cambiarImagenAnimacionRemolino,tempRemolino,"cuatro.png");
     tempRemolino = tempRemolino + aunmentoRemolino;
@@ -669,14 +672,49 @@ botomB.addEventListener('click', animacionRemolino)
 
 
 function ataqueTorre(){
-   setTimeout(100,cambiarimagenTorre,"dos.png");
+   setTimeout(()=>{cambiarimagenTorre('2.png')},0);
    
-   setTimeout(1000,cambiarimagenTorre,"dos.png");
-   console.log('no anda')
+   setTimeout(()=>{cambiarimagenTorre('1.png');
+   if(distanciaX>30){
+      daño(personaje2,"../pers2_1.png","golpeado.gif");
+   }},300);
+if(vidaP <= 10){
+   setTimeout(()=>{
+      muerte(personaje2,"muerte.gif")()
+   },500);
+   setTimeout(()=>{ pers2.style.display="none";
+},800)
+}
+   
 }
 
 function cambiarimagenTorre(a){
-   torreprincipal.src="./img/torre/"+a;
+   torreprincipal.src="img/personajes/remolino/"+a;
+   console.log('cambia la imagen');
+}
+
+function muerteTorre(){
+   torreprincipal.style.opacity="100%";
+
+   setTimeout(()=>{
+      torreprincipal.style.opacity="80%";
+   },100)
+
+   setTimeout(()=>{
+      torreprincipal.style.opacity="60%";
+   },200)
+
+   setTimeout(()=>{
+      torreprincipal.style.opacity="40%";
+   },300)
+
+   setTimeout(()=>{
+      torreprincipal.style.opacity="20%";
+   },400)
+
+   setTimeout(()=>{
+      torreprincipal.style.opacity="0%";
+   },500)
 }
 
 

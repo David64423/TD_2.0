@@ -12,6 +12,8 @@ let torreVida = document.getElementById('vidaTorre');
 let personajeVida = document.getElementById('vidaPersonaje2');
 let vidaT=200;
 let vidaP=50;
+let dañoTorre=10;
+let torreprincipal = document.getElementById('torreprincipal');
 
 function asociarVida(){
    torreVida.innerHTML=vidaT;
@@ -20,7 +22,7 @@ function asociarVida(){
 asociarVida();
 
 //let reset = document.getElementById('reset');
-izquierda.addEventListener('click',function(){ mainCaminar(personaje2,"pers2_1.png","pers2_2.png",restarX)});
+izquierda.addEventListener('click',ataqueTorre);
 start.addEventListener('click',function(){ automatizar(personaje2,"pers2_1.png","pers2_2.png",sumarX)});
 arriba.addEventListener('click',function(){ mainCaminar(personaje2,"pers2_1.png","pers2_2.png",sumarY)});
 abajo.addEventListener('click',function(){ mainCaminar(personaje2,"pers2_1.png","pers2_2.png",restarY)});
@@ -488,8 +490,9 @@ function daño(a,b,c){
    cambiar(a, "img/personajes/daño/"+c);
 
 
-   setTimeout(cambiar,3000,a,"img/personajes/daño/"+b);
- 
+   setTimeout(cambiar,500,a,"img/personajes/daño/"+b);
+   vidaP = vidaP-dañoTorre;
+  asociarVida();
 
 };
 function muerte(a,b,c){
@@ -645,6 +648,18 @@ pers2.src="img/personajes/remolino/"+a;
 }
 
 botomB.addEventListener('click', animacionRemolino) 
+
+
+function ataqueTorre(){
+   setTimeout(100,cambiarimagenTorre,"dos.png");
+   
+   setTimeout(1000,cambiarimagenTorre,"dos.png");
+   console.log('no anda')
+}
+
+function cambiarimagenTorre(a){
+   torreprincipal.src="./img/torre/"+a;
+}
 
 
  

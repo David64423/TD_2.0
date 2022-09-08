@@ -8,8 +8,21 @@ let distanciaX=0;
 let distanciaY=0;    
 let distanciaM=0.7;
 let start = document.getElementById('start');
+let torreVida = document.getElementById('vidaTorre');
+let personajeVida = document.getElementById('vidaPersonaje2');
+let vidaT=200;
+let vidaP=50;
+let dañoTorre=10;
+let torreprincipal = document.getElementById('torreprincipal');
+
+function asociarVida(){
+   torreVida.innerHTML=vidaT;
+   personajeVida.innerText=vidaP;
+}
+asociarVida();
+
 //let reset = document.getElementById('reset');
-izquierda.addEventListener('click',function(){ mainCaminar(personaje2,"pers2_1.png","pers2_2.png",restarX)});
+izquierda.addEventListener('click',ataqueTorre);
 start.addEventListener('click',function(){ automatizar(personaje2,"pers2_1.png","pers2_2.png",sumarX)});
 arriba.addEventListener('click',function(){ mainCaminar(personaje2,"pers2_1.png","pers2_2.png",sumarY)});
 abajo.addEventListener('click',function(){ mainCaminar(personaje2,"pers2_1.png","pers2_2.png",restarY)});
@@ -26,8 +39,7 @@ derecha.addEventListener('click',function(){muerte(personaje2,"../pers2_1.png","
 
 //Funcion para actualizar coordenadas
 const cambiarXY = () => {
-x.innerText = distanciaX;
-y.innerText = distanciaY;
+
 };
 
 cambiarXY();
@@ -461,6 +473,23 @@ i43++;
 
 //ataque boton A
 
+function ataque(){
+   let time=0;
+   let aumento=100;
+   pers2.style.height="95%";
+   pers2.style.width="75%";
+
+   setTimeout(cambiar,time,"../pers2_1.png");
+   time = time + aumento;
+   pers2.style.transition="1.0s";
+   pers2.style.transform="translate(31vw,10.50vh)";"img/personajes/";
+   setTimeout(cambiar,time,"img/personajes/");
+
+
+};
+   
+
+/*ataque 
 function ataque(a,b,c){
 
 
@@ -471,23 +500,25 @@ function ataque(a,b,c){
  
 
 };
+*/
 function daño(a,b,c){
 
 
    cambiar(a, "img/personajes/daño/"+c);
 
 
-   setTimeout(cambiar,3000,a,"img/personajes/daño/"+b);
- 
+   setTimeout(cambiar,500,a,"img/personajes/daño/"+b);
+   vidaP = vidaP-dañoTorre;
+  asociarVida();
 
 };
-function muerte(a,b,c){
+function muerte(a,b){
 
 
-   cambiar(a, "img/personajes/muerte/"+c);
+   cambiar(a, "img/personajes/muerte/"+b);
 
 
-   setTimeout(cambiar,3000,a,"img/personajes/muerte/"+b);
+   
  
 
 };
@@ -556,6 +587,135 @@ function animacionInicio(){
 function cambiarImagenAnimacionInicio(a){
    pers2.src="img/personajes/intro/"+a;
    }
+
+
+
+
+   let aunmentoRemolino=100;
+let aunmentoRemolinoR=100;
+//let pers2 = document.getElementById("pers2");
+let botomB = document.getElementById("botomB");
+
+//pers2.src="../img/personajes/pers2_1.png";
+
+
+function animacionRemolino(){
+    let tempRemolino=0;
+   
+    pers2.style.height="100%";
+    pers2.style.width="90%";
+   
+    
+    /*
+    height: 95%;
+    width: 75%;
+    */
+
+    setTimeout(cambiarImagenAnimacionRemolino,tempRemolino,"uno.png");
+    tempRemolino = tempRemolino + aunmentoRemolino;
+    setTimeout(cambiarImagenAnimacionRemolino,tempRemolino,"dos.png");
+    tempRemolino = tempRemolino + aunmentoRemolino;
+    setTimeout(cambiarImagenAnimacionRemolino,tempRemolino,"tres.png");
+    tempRemolino = tempRemolino + aunmentoRemolino;
+    setTimeout(cambiarImagenAnimacionRemolino,tempRemolino,"cuatro.png");
+    tempRemolino = tempRemolino + aunmentoRemolino;
+    setTimeout(()=>{cambiarImagenAnimacionRemolino("cinco.png");
+    pers2.style.transform="translate(50vw,10.50vh)";
+    pers2.style.transition="2s";
+    },tempRemolino,"cinco.png");
+    tempRemolino = tempRemolino + aunmentoRemolinoR;
+    setTimeout(cambiarImagenAnimacionRemolino,tempRemolino,"seis.png");
+    tempRemolino = tempRemolino + aunmentoRemolinoR;
+    setTimeout(cambiarImagenAnimacionRemolino,tempRemolino,"siete.png");
+    tempRemolino = tempRemolino + aunmentoRemolinoR;
+    setTimeout(()=>{cambiarImagenAnimacionRemolino("ocho.png");
+        pers2.style.transition="0.5s";
+        pers2.style.transform="translate(31vw,10.50vh)";
+      vidaT = vidaT-20;
+      asociarVida();
+   },tempRemolino,"ocho.png");
+    tempRemolino = tempRemolino + aunmentoRemolino;
+    setTimeout(cambiarImagenAnimacionRemolino,tempRemolino,"nueve.png");
+    tempRemolino = tempRemolino + aunmentoRemolino;
+    setTimeout(cambiarImagenAnimacionRemolino,tempRemolino,"diez.png");
+    tempRemolino = tempRemolino + aunmentoRemolino;
+    setTimeout(cambiarImagenAnimacionRemolino,tempRemolino,"once.png");
+    tempRemolino = tempRemolino + aunmentoRemolino;
+
+    if(vidaT <=20){
+      setTimeout(muerteTorre,tempRemolino);
+    }
+
+
+    setTimeout(cambiarImagenAnimacionRemolino,tempRemolino,"cuatro.png");
+    tempRemolino = tempRemolino + aunmentoRemolino;
+    setTimeout(cambiarImagenAnimacionRemolino,tempRemolino,"cinco.png");
+    tempRemolino = tempRemolino + aunmentoRemolino;
+    setTimeout(cambiarImagenAnimacionRemolino,tempRemolino,"dos.png");
+    tempRemolino = tempRemolino + aunmentoRemolino;
+    setTimeout(cambiarImagenAnimacionRemolino,tempRemolino,"uno.png");
+    tempRemolino = tempRemolino + aunmentoRemolino;
+    setTimeout(cambiarImagenAnimacionRemolino,tempRemolino,"../pers2_1.png");
+    setTimeout(()=>{
+        pers2.style.height="95%";
+        pers2.style.width="75%";
+        pers2.style.transition="0.001s"
+        
+    },tempRemolino)
+}
+
+function cambiarImagenAnimacionRemolino(a){
+pers2.src="img/personajes/remolino/"+a;
+}
+
+botomB.addEventListener('click', animacionRemolino) 
+
+
+function ataqueTorre(){
+   setTimeout(()=>{cambiarimagenTorre('2.png')},0);
+   
+   setTimeout(()=>{cambiarimagenTorre('1.png');
+   if(distanciaX>30){
+      daño(personaje2,"../pers2_1.png","golpeado.gif");
+   }},300);
+if(vidaP <= 10){
+   setTimeout(()=>{
+      muerte(personaje2,"muerte.gif")()
+   },500);
+   setTimeout(()=>{ pers2.style.display="none";
+},800)
+}
+   
+}
+
+function cambiarimagenTorre(a){
+   torreprincipal.src="img/personajes/remolino/"+a;
+   console.log('cambia la imagen');
+}
+
+function muerteTorre(){
+   torreprincipal.style.opacity="100%";
+
+   setTimeout(()=>{
+      torreprincipal.style.opacity="80%";
+   },100)
+
+   setTimeout(()=>{
+      torreprincipal.style.opacity="60%";
+   },200)
+
+   setTimeout(()=>{
+      torreprincipal.style.opacity="40%";
+   },300)
+
+   setTimeout(()=>{
+      torreprincipal.style.opacity="20%";
+   },400)
+
+   setTimeout(()=>{
+      torreprincipal.style.opacity="0%";
+   },500)
+}
 
 
  

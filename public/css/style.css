@@ -24,14 +24,50 @@ decir, no son bordes de prueba como los --bp */
 --cbp5: #f7f052;
 }
 
+.plantillas{
+    height: 7vh;
+    width: 9vw;
+}
+
+
+#vidaTorre{
+    position: relative;
+    bottom: 7.77vh;
+    left: 3.3vw;
+}
+
+#vidaPersonaje2{
+    position: relative;
+    bottom: 7.77vh;
+    left: 3.7vw;
+}
+
+#vidas{
+    position: relative;
+    left: 30vw;
+    
+    bottom: 107.5vh;
+    height: 25vh;
+    width: 20vw;
+    background:none;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2vw;
+}
+
+.colocarLado{
+    position: relative;
+    left: 10vw;
+    bottom: 13.5vh;
+}
+
+.vida{
+    color: white;
+}
+
 
 #boton_php{
-    border-radius: 25px;
-    background-color: var(--p);
-    height: 10vh;
-    width: 10vw;
-    color: var(--c2);
-    cursor: pointer;
+    background-color: transparent;
+    border: none;
 }
 
 #boton_php:hover{

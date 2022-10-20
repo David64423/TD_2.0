@@ -1,4 +1,4 @@
-let pers2 = document.getElementById('pers2');
+/*let pers2 = document.getElementById('pers2');
 let botomA = document.getElementById('botomA');
 
 function ataque(){
@@ -46,3 +46,4 @@ function asociarVida(){
     torreVida.innerHTML=vidaT;
     personajeVida.innerText=vidaP;
  }
+ */

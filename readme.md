@@ -1,0 +1,1 @@
+El objetivo de este pequeño sistema es poder trabajar en equipo para realizar un juego tipo "Tower Defense". El trabajo es principalmente Front End con las tecnologías HTML, Css y JavaScript. Este trabajo fue hecho para mi boothcamp de programación con la Fundación Empujar acompañada de la empresa SomosCoders.
